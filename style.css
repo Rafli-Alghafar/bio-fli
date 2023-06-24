@@ -1,0 +1,131 @@
+:root {
+    --title-color: #181818;
+    --text-color: #383838;
+    --bg-color: #ffd000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 40px);
+    min-height: calc(100vh - 40px);
+    padding: 20px;
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--title-color);
+}
+
+.profile-name {
+    margin-top: 10px;
+    font-size: 24px;
+    color: var(--title-color);
+}
+
+.summary {
+    color: var(--text-color);
+    font-weight: 100;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.about {
+    display: flex;
+    margin-top: 10px;
+}
+
+.about__title {
+    color: var(--title-color);
+    font-weight: 600;
+}
+
+.about__list {
+    display: flex;
+    margin-left: 10px;
+    list-style: none;
+    font-weight: 100;
+}
+
+.about__list li {
+    margin-right: 10px;
+}
+
+.about__list li a {
+    color: var(--text-color);
+    transition: all .3s;
+}
+
+.about__list li:hover {
+    color: red;
+}
+
+.list-link {
+    margin-top: 40px;
+    list-style: none;
+}
+
+.list-link li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    margin-bottom: 30px;
+    box-shadow: 5px 5px var(--title-color);
+    border: 3px solid var(--title-color);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.list-link li:nth-child(1) {
+    background-color: #61ebf0;
+}
+
+.list-link li:nth-child(2) {
+    background-color: rgb(220, 79, 79);
+}
+
+.list-link li:nth-child(3) {
+    background-color: rgb(92, 90, 90);
+}
+
+.list-link li:nth-child(4) {
+    background-color: #8ef061;
+}
+
+.list-link li a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.list-link li:hover {
+    transform: translate(-5px, -5px);
+}
+
+@media screen and (max-width: 300px) {
+    .list-link {
+        width: 100%;
+    }
+
+    .list-link li {
+        width: 100%;
+    }
+}
